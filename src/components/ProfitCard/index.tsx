@@ -1,53 +1,3 @@
-// import React from "react";
-// import { Grid, Card, Typography } from "@mui/material";
-// import { Line, Circle } from "rc-progress";
-
-// export interface ProfitCardProps {
-//   amount: number;
-//   percent?: number;
-// }
-
-// export const ProfitCard = (props: ProfitCardProps) => {
-//   const textContainerStyle = {
-//     position: "absolute" as const,
-//     top: "50%",
-//     left: "50%",
-//     transform: "translate(-50%, -50%)",
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContent: "center",
-//     width: "100%",
-//     height: "100%",
-//   };
-//   return (
-//     <Grid>
-//       <Typography>Net Profit</Typography>
-//       <Grid container spacing={2}>
-//         <Grid item>
-//           <Typography>{props.amount}</Typography>
-//         </Grid>
-//         <Grid item>
-//           <Grid height="100px" width="100px">
-//             <Circle
-//               percent={props.percent}
-//               strokeColor="lightblue"
-//               strokeWidth={4}
-//               trailWidth={4}
-//               trailColor="yellows"
-//               strokeLinecap="square"
-//             />
-//           </Grid>
-//           <Grid style={textContainerStyle}>
-//             <Typography>{props.percent}</Typography>
-//             <Typography fontSize={6}>Goal</Typography>
-//             <Typography fontSize={6}>completed</Typography>
-//           </Grid>
-//         </Grid>
-//       </Grid>
-//     </Grid>
-//   );
-// };
-
 import React from "react";
 import { Grid, Card, Typography, Box, CardContent } from "@mui/material";
 import { Circle } from "rc-progress";
@@ -76,7 +26,7 @@ export const ProfitCard = (props: ProfitCardProps) => {
         display="flex"
       >
         <Grid item>
-          <Typography variant="h4" textAlign="start" style={amountStyle}>
+          <Typography variant="h5" textAlign="start" style={amountStyle}>
             ${props.amount.toLocaleString()}
           </Typography>
         </Grid>
@@ -84,19 +34,27 @@ export const ProfitCard = (props: ProfitCardProps) => {
           <Box style={circleContainerStyle}>
             <Circle
               percent={props.progressPercent || 0}
-              strokeColor="lightblue"
+              strokeColor="#83A2FF"
               strokeWidth={8}
               trailWidth={8}
-              trailColor="#f0f0f0"
+              trailColor="#9BBEC8"
               strokeLinecap="round"
               style={circleStyle}
             />
             <Box style={textContainerStyle}>
               <Box>
-                <Typography variant="subtitle1" style={textStyle}>
+                <Typography
+                  variant="subtitle1"
+                  color="#ffffff"
+                  fontSize="15px"
+                  fontWeight="bold"
+                >
                   {props.progressPercent ? `${props.progressPercent}%` : "0%"}
                 </Typography>
-                <Typography fontSize="7px">{`Goal \n completed`}</Typography>
+                <Typography
+                  color="#ffffff"
+                  fontSize="7px"
+                >{`Goal \n completed`}</Typography>
               </Box>
             </Box>
           </Box>
@@ -122,11 +80,16 @@ export const ProfitCard = (props: ProfitCardProps) => {
               alignItems="center"
               color="#4caf50"
             >
-              {props.levelPercent}
+              {props.levelPercent}%
             </Typography>
           </Box>
         </Grid>
-        <Grid item>
+        <Grid
+          item
+          justifyContent="center"
+          alignContent="center"
+          alignItems="center"
+        >
           <Typography fontSize="6px" color="#ffffff">
             *This values here has been updated.
           </Typography>
@@ -140,8 +103,7 @@ export const ProfitCard = (props: ProfitCardProps) => {
 const cardStyle = {
   padding: "10px",
   borderRadius: "10px",
-  // boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
-  backgroundColor: "#40534C",
+  backgroundColor: "#4B4F5D",
   maxWidth: "300px",
   textAlign: "center" as const,
 };

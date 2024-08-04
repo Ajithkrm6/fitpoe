@@ -162,6 +162,14 @@ function App() {
         <Typography fontSize={20}>DashBoard</Typography>
         <ProfitCard amount={634520} progressPercent={70} levelPercent={3} />
         <BarChartCard />
+        <OrdersCard
+          img={<ShoppingBagIcon sx={{ color: "#ffffff", fontSize: "40px" }} />}
+          noOfOrders={75}
+          orderType="Total orders"
+          percentage={3}
+          percentageColor="#4caf50"
+          percentageIcon={<ArrowDropUpIcon style={{ color: "#4caf50" }} />}
+        />
       </Box>
     </Box>
   );
