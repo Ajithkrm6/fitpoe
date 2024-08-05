@@ -33,6 +33,10 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import { ProfitCard } from "./components/ProfitCard";
 import { BarChartCard } from "./components/BarChatCard";
+import { MenuCard } from "./components/MenuCard";
+import burger from "../src/assets/burger.png";
+import { RecentOrderTable } from "./components/Recent Orders Table";
+import { CustomerFeedBackCard } from "./components/CustomerFeedbackCard";
 
 const drawerWidth = 72; // Mini drawer width
 
@@ -157,22 +161,65 @@ function App() {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Grid
+        component="main"
+        // card bg - #021526 - 1
+        // card bg actual - #1A2130
+        sx={{ flexGrow: 1, p: 3, backgroundColor: "#000000", height: "auto" }}
+      >
         <DrawerHeader />
-        <Typography fontSize={20}>DashBoard</Typography>
-        <ProfitCard amount={634520} progressPercent={70} levelPercent={3} />
-        <BarChartCard />
-        <OrdersCard
-          img={<ShoppingBagIcon sx={{ color: "#ffffff", fontSize: "40px" }} />}
-          noOfOrders={75}
-          orderType="Total orders"
-          percentage={3}
-          percentageColor="#4caf50"
-          percentageIcon={<ArrowDropUpIcon style={{ color: "#4caf50" }} />}
-        />
-      </Box>
+        <Typography fontSize={20} color="#ffffff">
+          DashBoard
+        </Typography>
+      </Grid>
     </Box>
   );
 }
 
 export default App;
+
+{
+  /* <ProfitCard amount={634520} progressPercent={70} levelPercent={3} />
+<BarChartCard />
+<OrdersCard
+  img={<ShoppingBagIcon sx={{ color: "#ffffff", fontSize: "40px" }} />}
+  noOfOrders={75}
+  orderType="Total orders"
+  percentage={3}
+  percentageColor="#4caf50"
+  percentageIcon={<ArrowDropUpIcon style={{ color: "#4caf50" }} />}
+/>
+
+<Grid bgcolor="#1A2130">
+  <MenuCard
+    img={
+      <LunchDiningOutlinedIcon
+        style={{ height: "15px", width: "15px", color: "#D04848" }}
+      />
+    }
+    name="Goals"
+    backgroundClr="#FCAEAE"
+  />
+  <MenuCard
+    img={
+      <LunchDiningOutlinedIcon
+        style={{ height: "15px", width: "15px", color: "7EA1C3" }}
+      />
+    }
+    name="Goals"
+    backgroundClr="#4158A6"
+  />
+  <MenuCard
+    img={
+      <LunchDiningOutlinedIcon
+        style={{ height: "15px", width: "15px", color: "#03346E" }}
+      />
+    }
+    name="Goals"
+    backgroundClr="#179BAE"
+  />
+</Grid>
+
+<RecentOrderTable />
+<CustomerFeedBackCard /> */
+}

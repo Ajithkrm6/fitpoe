@@ -7,11 +7,13 @@ export interface ProfitCardProps {
   amount: number;
   progressPercent?: number;
   levelPercent?: number;
+  md?: number;
+  sm?: number;
 }
 
 export const ProfitCard = (props: ProfitCardProps) => {
   return (
-    <Grid style={cardStyle}>
+    <Grid md={props.md} sm={props.sm} style={cardStyle}>
       {/* <CardContent> */}
       <Grid>
         <Typography textAlign="start" style={titleStyle}>
@@ -103,7 +105,7 @@ export const ProfitCard = (props: ProfitCardProps) => {
 const cardStyle = {
   padding: "10px",
   borderRadius: "10px",
-  backgroundColor: "#4B4F5D",
+  backgroundColor: "#1A2130",
   maxWidth: "300px",
   textAlign: "center" as const,
 };

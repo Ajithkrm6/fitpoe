@@ -25,7 +25,7 @@ const data = [
 
 export const BarChartCard = () => {
   return (
-    <Grid container bgcolor="#4B4F5D" borderRadius="10px">
+    <Grid container bgcolor="#1A2130" borderRadius="10px">
       <Grid
         item
         md={12}

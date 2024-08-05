@@ -22,18 +22,22 @@ export const OrdersCard = (props: OrderCardProps) => {
   return (
     <Grid
       container
-      bgcolor="#4B4F5D"
+      // bgcolor="#4B4F5D" 2
+      // bgcolor="#212A3E"  1
+      bgcolor="#1A2130"
       display="flex"
       flexDirection="column"
       padding={2}
-      maxWidth="200px"
+      minWidth="200px"
       borderRadius="10px"
       md={props.md}
       sm={props.sm}
       lg={props.lg}
     >
       <Grid item md={12}>
-        <Box>{props.img}</Box>
+        <Box height="40px" width="40px" bgcolor="yellow">
+          {props.img}
+        </Box>
         <Typography color="#ffffff">{props.orderType}</Typography>
       </Grid>
       <Grid
