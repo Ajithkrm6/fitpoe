@@ -55,18 +55,16 @@ export const BarChartCard = (props: BarCHartCardProps) => {
           paddingLeft: "20px",
         }}
       >
-        <Typography color="#ffffff" variant="h6">
-          Activity
-        </Typography>
+        <Typography color="#ffffff">Activity</Typography>
         <Select
           value={selectedTimeframe}
           onChange={handleChange}
           sx={{
-            minWidth: 120,
+            minWidth: 70,
             borderRadius: "20px",
             borderWidth: "1px",
             borderColor: "#ffffff",
-            height: "40px",
+            height: "25px",
             color: "#ffffff",
             backgroundColor: "#4B4F5D",
             "& .MuiOutlinedInput-root": {
@@ -83,13 +81,22 @@ export const BarChartCard = (props: BarCHartCardProps) => {
           }}
         >
           <MenuItem color="#ffffff" value="weekly">
-            Weekly
+            <Typography
+              textAlign="center"
+              alignItems="center"
+              justifyContent="center"
+              alignSelf="center"
+              fontSize="14px"
+            >
+              {" "}
+              Weekly
+            </Typography>
           </MenuItem>
           <MenuItem color="#ffffff" value="monthly">
-            Monthly
+            <Typography fontSize="14px"> Monthly</Typography>
           </MenuItem>
           <MenuItem color="#ffffff" value="yearly">
-            Yearly
+            <Typography fontSize="14px"> Yearly</Typography>
           </MenuItem>
         </Select>
       </Grid>

@@ -25,7 +25,7 @@ export const MenuCard = (props: MenuCardProps) => {
       justifyContent="space-between"
       alignItems="center"
       sx={{
-        minWidth: 200,
+        // minWidth: 200,
         borderRadius: 1,
         padding: 2,
         transition: "transform 0.2s",

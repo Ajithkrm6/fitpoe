@@ -358,10 +358,13 @@ function App() {
               p: 3,
               backgroundColor: "#000000",
               height: "100%",
+              backgroundSize: "cover",
               borderTopRightRadius: "20px",
+              // overflowY: "hidden",
               "&::-webkit-scrollbar": {
                 // to disable scroll bar
                 width: "0px",
+                height: "0px",
               },
             }}
           >
@@ -459,7 +462,7 @@ function App() {
               <Grid item md={8} sm={12} xs={12}>
                 <BarChartCard height={180} />
               </Grid>
-              <Grid item md={4} sm={12}>
+              <Grid item md={4} xs={12} sm={12}>
                 <Box
                   bgcolor="#1A2130"
                   borderRadius="5px"
@@ -819,10 +822,10 @@ function App() {
                     "&::-webkit-scrollbar-thumb": {
                       backgroundColor: "#888", // Color of the scrollbar thumb
                       borderRadius: "10px", // Rounded corners for thumb
-                      border: "2px solid #1A2130", // Padding around thumb
+                      border: "2px solid #1A2130",
                     },
                     "&::-webkit-scrollbar-thumb:hover": {
-                      backgroundColor: "#555", // Color on hover
+                      backgroundColor: "#555",
                     },
                   }}
                 >

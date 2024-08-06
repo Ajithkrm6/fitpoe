@@ -65,7 +65,6 @@ export const CustomerFeedBackCard = () => {
     <Grid container direction="column">
       <Typography
         color="#ffffff"
-        variant="h6"
         sx={{
           // marginBottom: "10px",
           // textAlign: "center",
@@ -93,7 +92,7 @@ export const CustomerFeedBackCard = () => {
                   borderRadius: "30px",
                 }}
               />
-              <Typography sx={{ color: "#ffffff", fontWeight: "bold" }}>
+              <Typography sx={{ color: "#ffffff", fontSize: "14px" }}>
                 {customer.name}
               </Typography>
             </Box>
