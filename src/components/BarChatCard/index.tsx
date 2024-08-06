@@ -23,7 +23,7 @@ export interface BarCHartCardProps {
 }
 
 const data = [
-  { name: "5", uv: 4000, pv: 3700 },
+  { name: "5", uv: 9000, pv: 10000 },
   { name: "19", uv: 8000, pv: 5500 },
   { name: "11", uv: 3000, pv: 4000 },
   { name: "13", uv: 2800, pv: 2500 },
@@ -31,7 +31,7 @@ const data = [
   { name: "17", uv: 9000, pv: 2000 },
   { name: "19", uv: 11000, pv: 3500 },
   { name: "21", uv: 13000, pv: 4500 },
-  { name: "23", uv: 15000, pv: 5000 },
+  { name: "23", uv: 15000, pv: 8000 },
 ];
 
 export const BarChartCard = (props: BarCHartCardProps) => {
@@ -111,7 +111,7 @@ export const BarChartCard = (props: BarCHartCardProps) => {
               bottom: 0,
             }}
             barCategoryGap="10%" // Adjust space between categories
-            barGap={4} // Adjust space between bars within a category
+            barGap={7} // Adjust space between bars within a category
           >
             <CartesianGrid stroke="#8884d8" vertical={false} />
             <XAxis dataKey="name" tick={{ fill: "#ffffff" }} />
