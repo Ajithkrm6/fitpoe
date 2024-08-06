@@ -15,7 +15,7 @@ export const CustomerFeedBackCard = () => {
       image: AiImg1,
       rating: "5",
       comment:
-        "The Food was excellent and so as the service.I had mashroom risecottoe with scallians which was awsome. I had a burger with greens (gluten-free) which was also very good. They were very causious about guten allergies",
+        "The Food was excellent and so as the service. I had mushroom risotto with scallions which was awesome. I had a burger with greens (gluten-free) which was also very good. They were very cautious about gluten allergies.",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export const CustomerFeedBackCard = () => {
       image: AiImg2,
       rating: "4",
       comment:
-        "We enjoyed the Eggs Bendict servied with home made focaccia bread and hot coffee. Perfect service.",
+        "We enjoyed the Eggs Benedict served with homemade focaccia bread and hot coffee. Perfect service.",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ export const CustomerFeedBackCard = () => {
       image: AiImg3,
       rating: "3",
       comment:
-        "We enjoyed the Eggs Bendict servied with home made focaccia bread and hot coffee. Perfect service.",
+        "We enjoyed the Eggs Benedict served with homemade focaccia bread and hot coffee. Perfect service.",
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ export const CustomerFeedBackCard = () => {
       image: AiImg1,
       rating: "1",
       comment:
-        "We enjoyed the Eggs Bendict servied with home made focaccia bread and hot coffee. Perfect service.",
+        "We enjoyed the Eggs Benedict served with homemade focaccia bread and hot coffee. Perfect service.",
     },
     {
       id: 5,
@@ -47,7 +47,7 @@ export const CustomerFeedBackCard = () => {
       image: AiImg2,
       rating: "2",
       comment:
-        "We enjoyed the Eggs Bendict servied with home made focaccia bread and hot coffee. Perfect service.",
+        "We enjoyed the Eggs Benedict served with homemade focaccia bread and hot coffee. Perfect service.",
     },
   ];
 
@@ -62,15 +62,30 @@ export const CustomerFeedBackCard = () => {
   };
 
   return (
-    <Grid container display="flex" flexDirection="column">
-      <Typography>Customer's Feedback</Typography>
-      {data.map((customer, index) => (
-        <>
-          <Grid item padding="5px">
+    <Grid container direction="column">
+      <Typography
+        color="#ffffff"
+        variant="h6"
+        sx={{
+          // marginBottom: "10px",
+          // textAlign: "center",
+          fontWeight: "bold",
+        }}
+      >
+        Customer's Feedback
+      </Typography>
+      {data.map((customer) => (
+        <Box
+          key={customer.id}
+          display="flex"
+          flexDirection="column"
+          sx={{ marginBottom: "15px", width: "100%" }} // Ensure full width for each entry
+        >
+          <Grid item sx={{ padding: "5px" }}>
             <Box display="flex" alignItems="center">
               <Avatar
                 src={customer.image}
-                alt={customer.image}
+                alt={customer.name}
                 sx={{
                   marginRight: 1,
                   height: "35px",
@@ -78,36 +93,35 @@ export const CustomerFeedBackCard = () => {
                   borderRadius: "30px",
                 }}
               />
-              <Typography>{customer.name}</Typography>
+              <Typography sx={{ color: "#ffffff", fontWeight: "bold" }}>
+                {customer.name}
+              </Typography>
             </Box>
           </Grid>
-          <Box>
-            {
-              /* {customer.rating === "5"
-              ? 
-              : customer.rating === "4"
-              ? "*****"
-              : customer.rating === "3"
-              ? "***"
-              : customer.rating === "2"
-              ? "**"
-              : customer.rating === "1"
-              ? "*"
-              : ""} */
-              renderStars(customer.rating)
-            }
+          <Box sx={{ display: "flex", marginTop: "5px", marginBottom: "5px" }}>
+            {renderStars(customer.rating)}
           </Box>
-          <Typography color="#ffffff" fontSize="12px">
+          <Typography
+            color="#ffffff"
+            fontSize="12px"
+            sx={{
+              padding: "5px",
+              lineHeight: "1.4",
+              wordWrap: "break-word", // Ensure long text wraps properly
+              wordBreak: "break-word", // Handle any long unbroken text
+              whiteSpace: "pre-wrap", // Preserve whitespace formatting
+            }}
+          >
             {customer.comment}
           </Typography>
           <Divider
             sx={{
               "&:last-child td, &:last-child th": { border: 0 },
-              paddingTop: "10px",
+              marginTop: "10px",
               borderColor: "#C7C8CC",
             }}
           />
-        </>
+        </Box>
       ))}
     </Grid>
   );

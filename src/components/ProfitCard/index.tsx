@@ -39,7 +39,7 @@ export const ProfitCard = (props: ProfitCardProps) => {
               strokeColor="#83A2FF"
               strokeWidth={8}
               trailWidth={8}
-              trailColor="#9BBEC8"
+              trailColor="#536493"
               strokeLinecap="round"
               style={circleStyle}
             />
@@ -55,7 +55,7 @@ export const ProfitCard = (props: ProfitCardProps) => {
                 </Typography>
                 <Typography
                   color="#ffffff"
-                  fontSize="7px"
+                  fontSize="6px"
                 >{`Goal \n completed`}</Typography>
               </Box>
             </Box>
@@ -77,7 +77,7 @@ export const ProfitCard = (props: ProfitCardProps) => {
           >
             <ArrowDropUpIcon style={{ color: "#4caf50" }} />
             <Typography
-              fontSize="8px"
+              fontSize="12px"
               justifyContent="center"
               alignItems="center"
               color="#4caf50"
@@ -92,7 +92,7 @@ export const ProfitCard = (props: ProfitCardProps) => {
           alignContent="center"
           alignItems="center"
         >
-          <Typography fontSize="6px" color="#ffffff">
+          <Typography fontSize="10px" color="#ffffff">
             *This values here has been updated.
           </Typography>
         </Grid>
@@ -104,9 +104,9 @@ export const ProfitCard = (props: ProfitCardProps) => {
 // CSS styles
 const cardStyle = {
   padding: "10px",
-  borderRadius: "10px",
+  borderRadius: "5px",
   backgroundColor: "#1A2130",
-  maxWidth: "300px",
+  // minWidth: "auto",
   textAlign: "center" as const,
 };
 
@@ -123,8 +123,8 @@ const amountStyle = {
 const circleContainerStyle = {
   position: "relative" as const,
   display: "inline-block",
-  width: "80px",
-  height: "80px",
+  width: "70px",
+  height: "70px",
 };
 
 const circleStyle = {

@@ -1,14 +1,22 @@
 import React, { ReactNode } from "react";
-import { Box, Grid, SxProps, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  SxProps,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-
+import LunchDiningOutlinedIcon from "@mui/icons-material/LunchDiningOutlined"; // Importing for demonstration
+// MenuCardProps Interface
 export interface MenuCardProps {
   img: ReactNode;
   name: string;
   sx?: SxProps;
   backgroundClr?: string;
 }
-
+// MenuCard Component
 export const MenuCard = (props: MenuCardProps) => {
   return (
     <Grid
@@ -16,37 +24,45 @@ export const MenuCard = (props: MenuCardProps) => {
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      maxWidth="300px"
+      sx={{
+        minWidth: 200,
+        borderRadius: 1,
+        padding: 2,
+        transition: "transform 0.2s",
+        "&:hover": {
+          transform: "scale(1.02)", // Slight scale effect on hover for better UX
+        },
+      }}
     >
       <Grid item display="flex" alignItems="center">
         <Box
-          height="50px"
-          width="50px"
+          height={50}
+          width={50}
           borderRadius="30px"
+          display="flex"
           justifyContent="center"
           alignItems="center"
-          alignContent="center"
           bgcolor={props.backgroundClr}
-          display="flex"
         >
           {props.img}
         </Box>
-        <Typography color="#ffffff" marginLeft="20px">
+        <Typography color="#ffffff" marginLeft={2}>
           {props.name}
         </Typography>
       </Grid>
       <Grid item>
         <Box
-          height="20px"
-          width="20px"
-          borderRadius="20px"
+          height={30}
+          width={30}
+          borderRadius="15px"
+          display="flex"
           justifyContent="center"
           alignItems="center"
-          alignContent="center"
           bgcolor="#C7C8CC"
-          display="flex"
         >
-          <KeyboardArrowRightIcon style={{ height: "15px", width: "15px" }} />
+          <KeyboardArrowRightIcon
+            sx={{ height: 20, width: 20, color: "#1A2130" }}
+          />
         </Box>
       </Grid>
     </Grid>

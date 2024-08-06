@@ -3,10 +3,9 @@ import { Grid, Card, Typography, Box } from "@mui/material";
 import { SxProps } from "@mui/material";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
 export interface OrderCardProps {
   img: ReactNode;
-  noOfOrders: number;
+  noOfOrders: number | string;
   orderType: string;
   percentage: number;
   sx?: SxProps;
@@ -16,8 +15,9 @@ export interface OrderCardProps {
   lg?: number;
   percentageColor?: string;
   percentageIcon?: ReactNode;
+  imgBg?: string;
+  specialChar?: string;
 }
-
 export const OrdersCard = (props: OrderCardProps) => {
   return (
     <Grid
@@ -29,16 +29,26 @@ export const OrdersCard = (props: OrderCardProps) => {
       flexDirection="column"
       padding={2}
       minWidth="200px"
-      borderRadius="10px"
+      borderRadius="5px"
       md={props.md}
       sm={props.sm}
       lg={props.lg}
     >
       <Grid item md={12}>
-        <Box height="40px" width="40px" bgcolor="yellow">
+        <Box
+          height="40px"
+          width="40px"
+          borderRadius="8px"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          bgcolor={props.imgBg}
+        >
           {props.img}
         </Box>
-        <Typography color="#ffffff">{props.orderType}</Typography>
+        <Typography fontSize="12px" paddingTop="10px" color="#ffffff">
+          {props.orderType}
+        </Typography>
       </Grid>
       <Grid
         item
@@ -50,13 +60,20 @@ export const OrdersCard = (props: OrderCardProps) => {
       >
         <Grid container display="flex" justifyContent="space-between">
           <Grid item>
-            <Typography color="#ffffff" fontSize="16px" fontWeight="bold">
+            <Typography color="#ffffff" fontSize="25px" fontWeight="bold">
+              {props.specialChar}
               {props.noOfOrders}
             </Typography>
           </Grid>
-          <Grid item display="flex" flexDirection="row">
+          <Grid
+            item
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="row"
+          >
             <>{props.percentageIcon}</>
-            <Typography color={props.percentageColor}>
+            <Typography fontSize="12px" color={props.percentageColor}>
               {props.percentage}%
             </Typography>
           </Grid>

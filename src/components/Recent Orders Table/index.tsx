@@ -78,11 +78,11 @@ export const RecentOrderTable = () => {
     },
   ];
   return (
-    <Grid>
+    <Grid xs={12} sm={12}>
       <TableContainer
         component={Paper}
         elevation={3}
-        sx={{ padding: "10px", backgroundColor: "#1A2130" }}
+        sx={{ padding: "10px", backgroundColor: "#1A2130", width: "100%" }}
       >
         <Typography color="#ffffff">Recent Orders</Typography>
         <Table>
