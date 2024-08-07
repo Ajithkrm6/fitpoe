@@ -40,17 +40,17 @@ export const SearchInput = (props: SearchInputProps) => {
           sx={{
             // Remove the border
             "& .MuiOutlinedInput-notchedOutline": {
-              border: "none", // Remove border
+              border: "none",
             },
             "&:hover .MuiOutlinedInput-notchedOutline": {
-              border: "none", // Remove border on hover
+              border: "none",
             },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              border: "none", // Remove border when focused
+              border: "none",
             },
-            // Optional: Customize the input text area if needed
+
             "& .MuiInputBase-input": {
-              color: "#ffffff", // Text color
+              color: "#ffffff",
             },
             height: "30px",
             width: props.inputWidth,

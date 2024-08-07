@@ -30,7 +30,7 @@ export const MenuCard = (props: MenuCardProps) => {
         padding: 2,
         transition: "transform 0.2s",
         "&:hover": {
-          transform: "scale(1.02)", // Slight scale effect on hover for better UX
+          transform: "scale(1.02)",
         },
       }}
     >

@@ -22,8 +22,6 @@ export const OrdersCard = (props: OrderCardProps) => {
   return (
     <Grid
       container
-      // bgcolor="#4B4F5D" 2
-      // bgcolor="#212A3E"  1
       bgcolor="#1A2130"
       display="flex"
       flexDirection="column"

@@ -66,8 +66,6 @@ export const CustomerFeedBackCard = () => {
       <Typography
         color="#ffffff"
         sx={{
-          // marginBottom: "10px",
-          // textAlign: "center",
           fontWeight: "bold",
         }}
       >
@@ -78,7 +76,7 @@ export const CustomerFeedBackCard = () => {
           key={customer.id}
           display="flex"
           flexDirection="column"
-          sx={{ marginBottom: "15px", width: "100%" }} // Ensure full width for each entry
+          sx={{ marginBottom: "15px", width: "100%" }}
         >
           <Grid item sx={{ padding: "5px" }}>
             <Box display="flex" alignItems="center">
@@ -106,9 +104,9 @@ export const CustomerFeedBackCard = () => {
             sx={{
               padding: "5px",
               lineHeight: "1.4",
-              wordWrap: "break-word", // Ensure long text wraps properly
-              wordBreak: "break-word", // Handle any long unbroken text
-              whiteSpace: "pre-wrap", // Preserve whitespace formatting
+              wordWrap: "break-word",
+              wordBreak: "break-word",
+              whiteSpace: "pre-wrap",
             }}
           >
             {customer.comment}
