@@ -160,7 +160,7 @@ export const RecentOrderTable = () => {
                         borderRadius: "30px",
                       }}
                     />
-                    <Typography fontSize={isSmallScreen ? "12px" : "16px"}>
+                    <Typography fontSize={isSmallScreen ? "12px" : "14px"}>
                       {item.customer}
                     </Typography>
                   </Box>
@@ -172,7 +172,7 @@ export const RecentOrderTable = () => {
                     color: "#ffffff",
                   }}
                 >
-                  <Typography fontSize={isSmallScreen ? "12px" : "16px"}>
+                  <Typography fontSize={isSmallScreen ? "12px" : "14px"}>
                     {item.orderNo}
                   </Typography>
                 </TableCell>
@@ -183,7 +183,7 @@ export const RecentOrderTable = () => {
                     color: "#ffffff",
                   }}
                 >
-                  <Typography fontSize={isSmallScreen ? "12px" : "16px"}>
+                  <Typography fontSize={isSmallScreen ? "12px" : "14px"}>
                     {item.amount}
                   </Typography>
                 </TableCell>

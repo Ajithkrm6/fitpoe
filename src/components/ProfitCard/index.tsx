@@ -13,7 +13,7 @@ export interface ProfitCardProps {
 
 export const ProfitCard = (props: ProfitCardProps) => {
   return (
-    <Grid md={props.md} sm={props.sm} style={cardStyle}>
+    <Grid style={cardStyle}>
       <Grid>
         <Typography textAlign="start" style={titleStyle}>
           Net Profit

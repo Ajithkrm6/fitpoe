@@ -368,10 +368,9 @@ export const HomeScreen = () => {
             </Grid>
 
             <Grid container spacing={2}>
-              {/* Order Cards */}
-              <Grid item xs={12} md={8}>
+              <Grid item md={8} sm={12} xs={12}>
                 <Grid container spacing={2}>
-                  <Grid item xs={6} md={3}>
+                  <Grid item xs={6} md={3} lg={3}>
                     <OrdersCard
                       img={
                         <ShoppingBasketIcon
@@ -388,7 +387,7 @@ export const HomeScreen = () => {
                       imgBg="#4158A6"
                     />
                   </Grid>
-                  <Grid item xs={6} md={3}>
+                  <Grid item xs={6} md={3} lg={3}>
                     <OrdersCard
                       img={
                         <ShoppingBagIcon
@@ -405,7 +404,7 @@ export const HomeScreen = () => {
                       imgBg="#387F39"
                     />
                   </Grid>
-                  <Grid item xs={6} md={3}>
+                  <Grid item xs={6} md={3} lg={3}>
                     <OrdersCard
                       img={
                         <ShoppingBagIcon
@@ -422,7 +421,7 @@ export const HomeScreen = () => {
                       imgBg="#EF5A6F"
                     />
                   </Grid>
-                  <Grid item xs={6} md={3}>
+                  <Grid item xs={6} md={3} lg={3}>
                     <OrdersCard
                       img={
                         <PaidIcon sx={{ color: "#ffffff", fontSize: "40px" }} />
@@ -440,12 +439,14 @@ export const HomeScreen = () => {
                   </Grid>
                 </Grid>
               </Grid>
-              {/* Profit Card */}
-              <Grid item xs={12} sm={6} md={4}>
+
+              <Grid item md={4} xs={12} sm={12}>
                 <ProfitCard
                   amount={634520}
                   progressPercent={70}
                   levelPercent={3}
+                  md={4}
+                  sm={12}
                 />
               </Grid>
             </Grid>

@@ -25,14 +25,14 @@ export const OrdersCard = (props: OrderCardProps) => {
       bgcolor="#1A2130"
       display="flex"
       flexDirection="column"
+      // maxWidth="350px"
       padding={2}
-      minWidth="200px"
       borderRadius="5px"
       md={props.md}
       sm={props.sm}
       lg={props.lg}
     >
-      <Grid item md={12}>
+      <Grid item>
         <Box
           height="40px"
           width="40px"
@@ -50,8 +50,6 @@ export const OrdersCard = (props: OrderCardProps) => {
       </Grid>
       <Grid
         item
-        md={12}
-        sm={12}
         display="flex"
         flexDirection="row"
         justifyContent="space-between"
