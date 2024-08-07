@@ -25,7 +25,7 @@ export const OrdersCard = (props: OrderCardProps) => {
       bgcolor="#1A2130"
       display="flex"
       flexDirection="column"
-      // maxWidth="350px"
+      maxWidth="auto"
       padding={2}
       borderRadius="5px"
       md={props.md}

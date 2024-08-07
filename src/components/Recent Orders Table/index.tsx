@@ -84,7 +84,7 @@ export const RecentOrderTable = () => {
   ];
 
   return (
-    <Grid item xs={12}>
+    <Grid item width="100%">
       <TableContainer
         component={Paper}
         elevation={3}

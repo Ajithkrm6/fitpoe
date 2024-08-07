@@ -369,7 +369,12 @@ export const HomeScreen = () => {
 
             <Grid container spacing={2}>
               <Grid item md={8} sm={12} xs={12}>
-                <Grid container spacing={2}>
+                <Grid
+                  container
+                  spacing={2}
+                  display="flex"
+                  justifyContent="center"
+                >
                   <Grid item xs={6} md={3} lg={3}>
                     <OrdersCard
                       img={
@@ -440,7 +445,7 @@ export const HomeScreen = () => {
                 </Grid>
               </Grid>
 
-              <Grid item md={4} xs={12} sm={12}>
+              <Grid item md={4} xs={12} sm={12} lg={4}>
                 <ProfitCard
                   amount={634520}
                   progressPercent={70}
