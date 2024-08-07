@@ -51,6 +51,8 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import PaidIcon from "@mui/icons-material/Paid";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons/faSignOutAlt";
+import { faCrosshairs } from "@fortawesome/free-solid-svg-icons";
+import RoomServiceIcon from "@mui/icons-material/RoomService";
 
 const drawerWidth = 72; // Mini drawer width
 
@@ -464,10 +466,11 @@ export const HomeScreen = () => {
                 <Box bgcolor="#1A2130" borderRadius="5px">
                   <MenuCard
                     img={
-                      <LunchDiningOutlinedIcon
+                      <FontAwesomeIcon
+                        icon={faCrosshairs}
                         style={{
-                          height: "15px",
-                          width: "15px",
+                          height: "20px",
+                          width: "20px",
                           color: "#D04848",
                         }}
                       />
@@ -479,26 +482,26 @@ export const HomeScreen = () => {
                     img={
                       <LunchDiningOutlinedIcon
                         style={{
-                          height: "15px",
-                          width: "15px",
+                          height: "20px",
+                          width: "20px",
                           color: "7EA1C3",
                         }}
                       />
                     }
-                    name="Goals"
+                    name="Popular Dishes"
                     backgroundClr="#4158A6"
                   />
                   <MenuCard
                     img={
-                      <LunchDiningOutlinedIcon
+                      <RoomServiceIcon
                         style={{
-                          height: "15px",
-                          width: "15px",
+                          height: "20px",
+                          width: "20px",
                           color: "#03346E",
                         }}
                       />
                     }
-                    name="Goals"
+                    name="Menus"
                     backgroundClr="#179BAE"
                   />
                 </Box>
@@ -608,26 +611,6 @@ export const HomeScreen = () => {
                 justifyContent: "space-between", // Space out items between top and bottom
               }}
             >
-              {/* <List>
-                {drawerItems.map((item, index) => (
-                  <ListItem key={item.text} disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon
-                        sx={{
-                          color:
-                            selectedIndex === index ? "#83A2FF" : "#ffffff",
-                        }}
-                      >
-                        {item.icon}
-                      </ListItemIcon>
-                      <ListItemText
-                        primary={item.text}
-                        sx={{ color: "#ffffff" }}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                ))}
-              </List> */}
               <List sx={{ backgroundColor: "#1A2130", height: "100%" }}>
                 {[
                   "HomeOutlinedIcon",
@@ -881,10 +864,11 @@ export const HomeScreen = () => {
                 <Box bgcolor="#1A2130" borderRadius="5px" width="100%">
                   <MenuCard
                     img={
-                      <LunchDiningOutlinedIcon
+                      <FontAwesomeIcon
+                        icon={faCrosshairs}
                         style={{
-                          height: "15px",
-                          width: "15px",
+                          height: "20px",
+                          width: "20px",
                           color: "#D04848",
                         }}
                       />
@@ -896,26 +880,26 @@ export const HomeScreen = () => {
                     img={
                       <LunchDiningOutlinedIcon
                         style={{
-                          height: "15px",
-                          width: "15px",
+                          height: "20px",
+                          width: "20px",
                           color: "7EA1C3",
                         }}
                       />
                     }
-                    name="Goals"
+                    name="Popular Dishes"
                     backgroundClr="#4158A6"
                   />
                   <MenuCard
                     img={
-                      <LunchDiningOutlinedIcon
+                      <RoomServiceIcon
                         style={{
-                          height: "15px",
-                          width: "15px",
+                          height: "20px",
+                          width: "20px",
                           color: "#03346E",
                         }}
                       />
                     }
-                    name="Goals"
+                    name="Menus"
                     backgroundClr="#179BAE"
                   />
                 </Box>
